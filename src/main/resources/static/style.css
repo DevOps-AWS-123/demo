@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(270deg, #ff9a9e 0%, #fad0c4 100%);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite; /* Background animation */
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    text-align: center;
+    z-index: 1; /* Ensure container is above the background */
+}
+
+.heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeIn 2s;
+}
+
+/* Button Styles */
+.animate-btn {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.animate-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Button Animation */
+.animate {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
